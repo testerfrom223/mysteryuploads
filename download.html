@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Download File</title>
+</head>
+<body>
+  <h1>Download File</h1>
+  <p>Click the button below to download the file:</p>
+  <a id="downloadButton" href="#" download>Download</a>
+  
+  <script>
+    const filename = decodeURIComponent(window.location.search.split('=')[1]);
+    const downloadButton = document.getElementById('downloadButton');
+    downloadButton.href = `/download/${filename}`;
+  </script>
+</body>
+</html>
